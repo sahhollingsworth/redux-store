@@ -1,5 +1,7 @@
-# Redux Store
-tbd
+# E-Commerce Platform - Redux Store Refactor
+This project is a refactor of existing code for an e-commerce platform to use Redux to manage application state.
+
+Given part of a Web developers role is to immerse themselves in a new technology to solve a problem, with only that tool’s documentation for help, this project is intended as a practical run through of this type of experience.
 
 ## Summary
 [Click here to use the Redux Store.](https://redux-store-211115.herokuapp.com/)
@@ -36,14 +38,11 @@ Required when when you first set up the project for local development or use OR 
   * [Expressjs](https://expressjs.com/) - Leveraged for API's, utility methods, and middleware.
   * [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
   * [Bcrypt](https://www.npmjs.com/package/bcrypt) - Used for password hashing.
-  * [React-Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/) - Bootstrap CSS framework for React projects.
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript) - Core app logic.
 * [CSS](https://devdocs.io/css/) - Used to style html elements on the page as needed beyond Bootstrap.
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Used to create elements on the DOM.
 * [Git](https://git-scm.com/doc) - Version control system to track changes to source code.
 * [GitHub](https://docs.github.com/en) - Hosts the code repository.
-
-* [Google Books API](https://developers.google.com/books/) - Data for search engine
 
 ## Author
 Sarah Hollingsworth
