@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react';
-import ProductItem from '../ProductItem';
-import { useStoreContext } from '../../utils/GlobalState';
-import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
+//import Dispatch & Selector hooks from redux
+import { useDispatch, useSelector } from 'react-redux';
+
+import ProductItem from '../ProductItem';
+import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
 function ProductList() {
-  const [state, dispatch] = useStoreContext();
+  //  Returns a reference to the dispatch function from the Redux store. Used to dispatch actions as needed.
+  const dispatch = useDispatch();
+
+  // Runs whenever an action (resolver) is dispatched and determines the (new) state value as a result of that action 
+  const state = useSelector((state) => state);
 
   const { currentCategory } = state;
 
@@ -50,19 +56,19 @@ function ProductList() {
         <div className="flex-row">
           {filterProducts().map((product) => (
             <ProductItem
-              key={product._id}
-              _id={product._id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              quantity={product.quantity}
+              key={ product._id }
+              _id={ product._id }
+              image={ product.image }
+              name={ product.name }
+              price={ product.price }
+              quantity={ product.quantity }
             />
           ))}
         </div>
       ) : (
         <h3>You haven't added any products yet!</h3>
       )}
-      {loading ? <img src={spinner} alt="loading" /> : null}
+      {loading ? <img src={ spinner } alt="loading" /> : null}
     </div>
   );
 }
