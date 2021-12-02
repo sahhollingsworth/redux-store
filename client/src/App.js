@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 // Import component that allows store access to all children components
 import { Provider } from 'react-redux';
 // Import our custom store context instance
-import store from '/utils/store';
+import store from './utils/store';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
