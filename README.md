@@ -10,11 +10,11 @@ Given part of a Web developers role is to immerse themselves in a new technology
 
 ![GIF of Application functionality including adding, removing, and increasing quantity of products in car, product details page, logging in, and checkout handoff to Stripe](./images/shop-shop_demo.gif)
 
-* The app uses a Redux store instead of the Context API
-* The app's React front end uses a Redux provider to access the store
-* The app determines changes to its global state by passing reducers to a Redux store instead of using the Context API
-* The app extracts state data from the store using Redux instead of the Context API
-* The app dispatches actions using Redux instead of the Context API
+* The app uses a Redux store instead of the Context API.
+* The React front end uses a Redux provider to access the store.
+* Global state changes are determined by passing reducers to a Redux store instead of using the Context API.
+* State data is extracted from the store using Redux instead of the Context API.
+* Actions are dispatched using Redux instead of the Context API.
 
 ## Installation
 Ensure you have Node.js installed locally to install packages to and from the public npm registry. Node.js installation documentation.
