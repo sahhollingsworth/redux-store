@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
-import { useStoreContext } from '../../utils/GlobalState';
+//import Dispatch & Selector hooks from redux
+import { useDispatch, useSelector } from 'react-redux';
+
 import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
@@ -9,7 +11,11 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
 function CategoryMenu() {
-  const [state, dispatch] = useStoreContext();
+  //  Returns a reference to the dispatch function from the Redux store. Used to dispatch actions as needed.
+  const dispatch = useDispatch();
+
+  // Runs whenever an action (resolver) is dispatched and determines the (new) state value as a result of that action 
+  const state = useSelector((state) => state);
 
   const { categories } = state;
 
