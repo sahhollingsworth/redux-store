@@ -1,18 +1,25 @@
 import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
+//import Dispatch & Selector hooks from redux
+import { useDispatch, useSelector } from 'react-redux';
+
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
-import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
-  const [state, dispatch] = useStoreContext();
+  //  Returns a reference to the dispatch function from the Redux store. Used to dispatch actions as needed.
+  const dispatch = useDispatch();
+
+  // Runs whenever an action (resolver) is dispatched and determines the (new) state value as a result of that action 
+  const state = useSelector((state) => state);
+
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {
@@ -62,7 +69,7 @@ const Cart = () => {
 
   if (!state.cartOpen) {
     return (
-      <div className="cart-closed" onClick={toggleCart}>
+      <div className="cart-closed" onClick={ toggleCart }>
         <span role="img" aria-label="trash">
           🛒
         </span>
@@ -72,7 +79,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <div className="close" onClick={toggleCart}>
+      <div className="close" onClick={ toggleCart }>
         [close]
       </div>
       <h2>Shopping Cart</h2>
@@ -86,7 +93,7 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button onClick={ submitCheckout }>Checkout</button>
             ) : (
               <span>(log in to check out)</span>
             )}
