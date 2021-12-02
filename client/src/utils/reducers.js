@@ -12,10 +12,14 @@ import {
   TOGGLE_CART
 } from "./actions";
 
-// default initialState 
-// const initialState = { 
-
-// }
+// default initialState values
+const initialState = { 
+  products: [],
+  cartOpen: false,
+  cart: [],
+  categories: [],
+  currentCategory: ''
+};
 
 // Pass through default initialState values, if none provided from client
 export default function reducer(state = initialState, action) {

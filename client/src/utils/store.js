@@ -3,4 +3,5 @@ import { createStore } from 'redux';
 
 import reducers from './reducers';
 
+//Create store using the reducer function output
 export default createStore(reducers);
