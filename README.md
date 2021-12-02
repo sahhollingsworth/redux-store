@@ -8,7 +8,7 @@ Given part of a Web developers role is to immerse themselves in a new technology
 
 [Demo of the refactored E-Commerce Platform](https://watch.screencastify.com/v/5HRax4dZ7uFAeuBVJTzp)
 
-![GIF of Application functionality including adding, removing, and increasing quantity of products in car, product details page, logging in, and checkout handoff to Stripe](./images.shop-shop_demo.gif)
+![GIF of Application functionality including adding, removing, and increasing quantity of products in car, product details page, logging in, and checkout handoff to Stripe](./images/shop-shop_demo.gif)
 
 * The app uses a Redux store instead of the Context API
 * The app's React front end uses a Redux provider to access the store
