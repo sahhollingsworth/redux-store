@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+//import Dispatch & Selector hooks from redux
+import { useDispatch, useSelector } from 'react-redux';
 
 import Cart from '../components/Cart';
-import { useStoreContext } from '../utils/GlobalState';
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -15,7 +16,12 @@ import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
 function Detail() {
-  const [state, dispatch] = useStoreContext();
+  //  Returns a reference to the dispatch function from the Redux store. Used to dispatch actions as needed.
+  const dispatch = useDispatch();
+
+  // Runs whenever an action (resolver) is dispatched and determines the (new) state value as a result of that action 
+  const state = useSelector((state) => state);
+
   const { id } = useParams();
 
   const [currentProduct, setCurrentProduct] = useState({});
