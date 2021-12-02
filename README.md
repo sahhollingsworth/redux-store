@@ -4,9 +4,11 @@ This project is a refactor of existing code for an e-commerce platform to use Re
 Given part of a Web developers role is to immerse themselves in a new technology to solve a problem, with only that tool’s documentation for help, this project is intended as a practical run through of this type of experience.
 
 ## Summary
-[Click here to use the Redux Store.](https://redux-store-211115.herokuapp.com/)
+[Click here to use the refactored E-Commerce Platform.](https://redux-store-211115.herokuapp.com/)
 
-![Image of app interface](./whateverfilepath.png)
+[Demo of the refactored E-Commerce Platform](https://watch.screencastify.com/v/5HRax4dZ7uFAeuBVJTzp)
+
+![GIF of Application functionality including adding, removing, and increasing quantity of products in car, product details page, logging in, and checkout handoff to Stripe](./images.shop-shop_demo.gif)
 
 * The app uses a Redux store instead of the Context API
 * The app's React front end uses a Redux provider to access the store
@@ -22,7 +24,7 @@ Ensure you have Node.js installed locally to install packages to and from the pu
 2. Install application dependencies `npm install`.
 Required when when you first set up the project for local development or use OR if any changes are made to the project's dependencies. More Node information here.
 
-3. Start the application with `npm start`. This will open the app in a new tab in your default web browser. 
+3. Start the application with `npm run develop`. This will open the app in a new tab in your default web browser. 
 
 ## Technologies
 * [Mongo DB](https://www.mongodb.com/) - The NoSQL database used to support record storage.
@@ -50,6 +52,8 @@ Sarah Hollingsworth
 * [LinkedIn](https://www.linkedin.com/in/sarahhollingsworth/)
 
 ## References
+* Traversy Media's [Redux Crash Course with React](https://www.youtube.com/watch?v=93p3LxR9xfM)
+* [Redux Fundamentals tutorial](https://redux.js.org/tutorials/fundamentals/part-1-overview)
 
 ## License
 * Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
